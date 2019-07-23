@@ -1,0 +1,24 @@
+<div>
+    <div *ngIf='bandera'>
+        <img src="/assets/imagen/computacion5.jpg">
+    </div>
+    <button (click)="Complementar()">Complementar</button>
+
+    <br>
+    <br>
+
+    <ul *ngFor='let person of people' [ngSwitch]='person.country'>
+        <li *ngSwitchCase="'USA'" style="color: green" appMiDirectiva1>
+            {{person.name}} {{person.country}}
+        </li>
+        <li *ngSwitchCase="'BO'" style="color: red" appMiDirectiva1>
+            {{person.name}} {{person.country}}
+        </li>
+    </ul>
+
+    <div>
+        <button appMiDirectiva1>Mi primera directiva</button>
+        <p appMiDirectiva1>Esto esta quedando bastante bien</p>
+        <h1 appMiDirectiva1>Como vemos da igual que tag contenga</h1>
+    </div>
+</div>
